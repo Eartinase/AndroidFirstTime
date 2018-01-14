@@ -16,13 +16,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "Happy");
 
-        Button btnDoSomething =(Button)(findViewById(R.id.btnDoSomething));
+        final Button btnDoSomething =(Button)(findViewById(R.id.btnDoSomething));
         btnDoSomething.setOnClickListener(new View.OnClickListener() {
-            TextView text = (TextView) findViewById(R.id.someText);
+       //     TextView text = (TextView) findViewById(R.id.someText);
+            TextView num1 = (TextView) findViewById(R.id.editText);
+            TextView num2 = (TextView) findViewById(R.id.editText2);
+            TextView ans = (TextView) findViewById(R.id.ans);
             int x = 0;
             @Override
             public void onClick(View view) {
-                text.setText("You clicked "+x+" time(s)!");
+
+                int result = Integer.parseInt(num1.getText().toString())+ Integer.parseInt(num2.getText().toString());
+                ans.setText("Result is "+result);
+             //   text.setText(btnDoSomething.getText());
             //    text.append();
                 x++;
                 Log.i(TAG, "Clicked!");

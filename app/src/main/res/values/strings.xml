@@ -3,4 +3,7 @@
     <string name="btnDoSomething">Do Something!</string>
     <string name="Text">int</string>
     <string name="someText">0</string>
+    <string name="num1" />
+    <string name="num2" />
+    <string name="ans" />
 </resources>
